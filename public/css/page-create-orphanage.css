@@ -1,0 +1,23 @@
+#page-create-orphanage{
+    display: flex;
+    min-height: 100vh;
+}
+
+main{
+    flex:1; 
+    /*Conteúdo ficará centralizado! Para isso é necessário ser display: flex e margin: auto nas laterais*/
+}
+
+.map-container{
+    margin: 0 0 4rem; /*zerar tudo e colocar 40px de margem*/
+}
+
+.map-container .leaflet-container {
+    border-radius: 20px 20px 0 0 ; /*Apenas as duas bordas de cima */
+    
+}
+
+.map-container footer{
+    background: #f5f8fa;
+    border-radius: 0 0 20px 20px;
+}

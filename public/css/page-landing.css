@@ -1,0 +1,130 @@
+
+#page-landing{
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%); /* aplica um degradê */
+
+    min-height: 100vh; /*No mínimo a tela inteira, mas se precisar mais, tudo bem*/
+    
+    text-align: center; /*Alinha na horizontal*/
+
+    /*O display flex possibilita que as "caixas" dentro da page-landing se alinhem um ao 
+    lado do outro, mesmo se forem do tipo block*/
+    display: flex;
+    /*align-items: center; /* Alinha na vertical, só foi possível por causa do display flex*/
+
+}
+
+#container{
+    margin: auto; /*Centraliza tanto na horizontal, quanto na vertical os itens do container
+    /*também precisa do display flex para funcionar corretamente*/
+
+    /*width: 90%; /* só vai ocupar 90% da largura do dispositivo*/
+    
+    /*Este width vai escolher o mínimo entre os dois. Enquanto 90% da tela for menor do que 
+    1120px, ele vai setar o width com 90%. Mas se 90% chegar a ser maior, ele vai setar o width
+    como 1120px, para não ultrapassar este limite*/
+    width: min(90%, 122rem);
+}
+
+.location, h1, .visit p {
+    height: 16vh;
+}
+
+#logo {
+    animation-delay: 50ms;
+}
+
+.location{
+    animation-delay:100ms;
+}
+
+main h1{
+    animation-delay:150ms;
+    /*Clamp precisa de 3 valores. O valor mínimo, o valor que vc acha mais adequado, e o valor máximo*/
+    font-size: clamp(4rem, 8vw, 8.4rem);
+}
+
+.visit a:hover{
+    background: #96feff;
+}
+
+.visit p{
+    animation-delay:200ms;
+}
+
+.visit a{
+    width: 8rem;
+    height: 8rem;
+    background: #ffd666;
+
+    border:none;
+    border-radius: 3rem;
+
+    display: flex;
+    align-items: center; /*vertical*/
+    justify-content: center; /*horizontal*/
+
+    margin: auto;
+
+    transition: background 500ms; 
+    /* quando colocar o mouse em cima do botao, ele vai
+    transitar para a cor colocada no a:hover, e o processo
+    irá durar 200ms*/
+
+    animation-delay:250ms;
+}
+
+/*desktop version*/
+@media (min-width:760px){
+
+    #container{
+        /*a caixa aumenta se usar padding*/
+        padding: 5rem 2rem;
+
+        /* shorthand background: image repeat position / size*/
+        background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem);
+    }
+
+    header{
+        display: flex;
+        /*As duas linhas abaixo só são possíveis por causa do display flex!*/
+        align-items: center;/*alinha no eixo y*/
+        justify-content: space-between;/*alinha no centro do eixo x*/
+    }
+
+    .location, h1, .visit p {
+        height: initial; /*em mobile está em 16vh*/
+        text-align: initial;
+    }
+
+    .location{
+        text-align: right;
+        font-size: 2.4rem;
+        line-height: 1.5;
+    }
+
+    main h1{
+        font-weight: bold;
+        width: min(300px, 80%);
+
+        line-height: .88; /*espaçamento entre as linhas*/
+
+        margin: clamp(10%, 9vh ,12%) 0 4rem;
+    }
+
+    .visit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .visit p{
+        font-size: 2.4rem;
+        line-height: 1.5;
+        width: clamp(20rem, 20vw, 30rem);
+    }
+
+    .visit a{
+        margin: initial;
+    }
+
+}

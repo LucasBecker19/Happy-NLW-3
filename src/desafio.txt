@@ -1,0 +1,9 @@
+desafio: 
+validar o mapa, se ele foi preenchido ou nao
+no formulário html, adicione onsubmit="validate(event)"
+
+no page-create-orphanage.js vc vai criar uma funcao de validacao
+tem que ter o event.preventDefault() dentro do if que serve para a não validação
+junto tambem um alert('selecione um ponto no mapa')
+
+needsLatAndLng = vai ser booleano

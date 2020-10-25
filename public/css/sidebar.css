@@ -1,0 +1,36 @@
+
+aside.sidebar{
+    position:fixed; /*deixa a sidebar fixa na rolagem da tela*/
+    height: 100%;
+
+    /*mesma coisa que 32px e 24px se o :root no main.css esteja com font-size: 62.5%;*/
+    padding: 3.2rem 2.4rem ; 
+    background: #15c3d6;
+
+    display:flex;
+    flex-direction: column; /*ao invés do display flex alinhar lado a lado, ele alinhará abaixo*/
+    justify-content: space-between; /* consequente a linha de cima, este space-between dará espaço no eixo Y*/
+    align-items: center;
+}
+
+aside.sidebar footer button{
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: #12afcb;
+    border-radius: 1.6rem;
+    cursor: pointer; /*cursos vira uma mãozinha*/ 
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+aside.sidebar footer button:hover{
+    background: #17d6eb;
+}
+
+.with-side-bar{
+    padding-left: 110px;
+}

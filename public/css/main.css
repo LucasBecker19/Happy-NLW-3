@@ -1,0 +1,27 @@
+* {
+    /*Removendo o preenchimento e margem padrão do html*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* o padrao do css é content box, entao quando vc coloca um padding, a caixa aumenta de tamanho
+    usando o border box, a caixa não aumentará de tamanho, e o conteúdo será "esmagado", terá menos espaço*/
+}
+
+body{
+    height: 100vh; /*Necessário para especificar que o body vai usar 100% do View Port*/
+    color: white;
+    background: #ebf2f5;
+}
+
+:root{ /*Definir um padrão ao root*/
+    font-size: 62.5%;
+}
+
+body, input, button, textarea{
+    /*font-weight: 400; //peso da fonte
+    font-size: 18px;
+    line-height: 1; //Espaçamento entre linhas, como no word
+    font-family: 'Nunito', sans-serif;*/
+
+    font: 400 1.8rem/1 'Nunito', sans-serif; /*Essa linha resume todas acima*/
+}
